@@ -11,6 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="/static/styles/jquery.fancybox.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="/static/styles/jquery.fancybox-thumbs.css" media="screen" />
 
+		<link rel="stylesheet" type="text/css" href="/static/styles/bs-responsive.css" media="screen" />
+
 		<link  href="//fonts.googleapis.com/css?family=Molengo:regular|IM+Fell+English:regular,italic|Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
 
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -41,12 +43,12 @@
 	<body cover="{{ cover }}">
                 <div id="header">
                         <h2><a href="/">Ward Photography</a></h2>
-			<nav>
+			<div class="menu-btn visible-phone">&#9776;</div>
+			<nav class="hidden-phone">
 				<ul>
-					<li>Made for Water</li>
-					<li>Men at Sea</li>
-					<li class="active">American West</li>
-					<li>Ko Lanta's Gasoline</li>
+					{% for nav_item in nav %}
+					<li{{ nav_item.active ? ' class="active"' : '' }}><a href="{{ nav_item.url }}">{{ nav_item.title }}</a></li>
+					{% endfor %}
 				</ul>
 			</nav>
                 </div>

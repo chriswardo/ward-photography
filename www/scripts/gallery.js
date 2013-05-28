@@ -36,13 +36,27 @@ $(document).ready(function() {
 
 	$("[rel='fancybox-thumb']").fancybox( desktop );
 
+	$('.menu-btn').click( function() {
+		$('nav').toggleClass('hidden-phone');
+	});
+
     setCoverBackground();
 });
+var prevWidth = $(window).width();
+var prevHeight = $(window).height();
 $(window).resize(function() {
-	//TODO: do this on a timer so as to not overload it when resizing
-	waitForFinalEvent(function(){
-		setCoverBackground();
-	}, 500, "resizing");
+	
+	if ( Math.abs( $(window).width() - prevWidth ) > 20 || Math.abs( $(window).height() - prevHeight ) > 20 ) {
+
+		//TODO: do this on a timer so as to not overload it when resizing
+		waitForFinalEvent(function(){
+			setCoverBackground();
+		}, 500, "resizing");
+
+	}
+
+	prevWidth = $(window).width();
+	prevHeight = $(window).height();
 });
 $(window).bind('orientationchange', function(event) {
 	adapt_to_orientation();
