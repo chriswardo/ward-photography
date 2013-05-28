@@ -1,0 +1,18 @@
+{% set title = 'Made for Water' %}
+{% set cover = 'http://images.eurogamer.net/2013/fatchris/09-IMG_0109.jpg/EG11/modulate/100,25,100' %}
+{% extends 'gallery/base.html' %}
+
+{% block includes %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="/static/styles/made-for-water.css" media="screen" />
+{% endblock %}
+
+{% block content %}
+	<div id="description"><h1>'Made for Water'</h1> is a collection of man-made items connected by their use with water. I've focused on their textures and colours.</div>
+	<div id="gallery">
+
+		{% for img in images %}
+		<a href="/static/images/gallery/made-for-water/med/{{ img }}" class="fancybox-thumb" rel="fancybox-thumb"><img src="/static/images/gallery/made-for-water/thumb/{{ img }}" width="120" height="120" /></a>
+		{% endfor %}
+	</div>
+{% endblock %}

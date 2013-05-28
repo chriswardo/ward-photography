@@ -1,0 +1,60 @@
+bodyx {
+        background-color: black;
+	background-image: url(http://images.eurogamer.net/2013/fatchris/0058.jpg/EG11/modulate/100,25,100);
+	background-repeat: no-repeat;
+	background-position: center;	
+        background-size: cover;
+	background-attachment: fixed;
+
+
+}
+htmlx { 
+  background: url(http://images.eurogamer.net/2013/fatchris/0058.jpg/EG11/modulate/100,25,100) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+bodyx
+{
+  padding: 0px;
+  margin: 0px;
+  height:100%;
+  overflow: scroll;
+}
+
+#footer {
+	color: black;
+	text-shadow: -1px 1px 2px white;
+}
+
+#description {
+	max-width: 215px;
+	margin: 10px auto 20px auto;
+	padding: 8px;
+	font-style: normal;
+	font-size: 14px;
+	color: #EEE;
+	filter: dropshadow(color=#444, offx=-1, offy=1);
+	background-color: rgba(255, 0, 0, 0.5);
+	-moz-border-radius: 15px;
+	border-radius: 4px;
+	text-align: justify;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+#description h1 {
+	color: #6794CF;
+	font-style: initial;
+	font-size: 21px;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	width: 115px;
+	display: block;
+	float: left;
+	text-align: center;
+	text-shadow: -1px 1px 2px #444;
+	padding-right: 8px;
+}

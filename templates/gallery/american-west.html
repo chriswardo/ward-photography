@@ -1,0 +1,18 @@
+{% set title = 'American West, 2009' %}
+{% set cover = 'http://images.eurogamer.net/2013/fatchris/0058.jpg/EG11/modulate/100,25,100' %}
+{% extends 'gallery/base.html' %}
+
+{% block includes %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="/static/styles/american-west.css" media="screen" />
+{% endblock %}
+
+{% block content %}
+	<div id="description"><h1>American West 2009</h1> A collection of photos from a road trip around the western states of the USA. Includes the Grand Canyon, Yellowstone National Park &amp; Monument Valley.</div>
+	<div id="gallery">
+
+		{% for img in images %}
+		<a href="/static/images/gallery/american-west/med/{{ img }}" class="fancybox-thumb" rel="fancybox-thumb"><img src="/static/images/gallery/american-west/thumb/{{ img }}" width="120" height="120" /></a>
+		{% endfor %}
+	</div>
+{% endblock %}
