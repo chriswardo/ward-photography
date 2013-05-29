@@ -17,30 +17,9 @@ $(document).ready(function() {
                 prevEffect  : 'fade',
         };
 
-	var mobile = {
-                helpers : {
-                        thumbs : false,
-                },
-                nextClick: true,
-                closeBtn : false,
-                arrows: false,
-                openEffect  : 'fade',
-                closeEffect : 'fade',
-                nextEffect  : 'fade',
-                prevEffect  : 'fade',
-
-		padding: 0,
-		margin: 10,
-        };
-
-
 	$("[rel='fancybox-thumb']").fancybox( desktop );
 
-	$('.menu-btn').click( function() {
-		$('nav').toggleClass('hidden-phone');
-	});
-
-    setCoverBackground();
+	setCoverBackground();
 });
 var prevWidth = $(window).width();
 var prevHeight = $(window).height();

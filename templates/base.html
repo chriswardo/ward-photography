@@ -7,22 +7,12 @@
 
 		{% block includes %}
 
-		<link rel="stylesheet" type="text/css" href="/static/styles/new.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/static/styles/jquery.fancybox.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/static/styles/jquery.fancybox-thumbs.css" media="screen" />
-
+		<link href="//fonts.googleapis.com/css?family=Molengo:regular|IM+Fell+English:regular,italic|Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
+		<link rel="stylesheet" type="text/css" href="/static/styles/style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="/static/styles/bs-responsive.css" media="screen" />
-
-		<link  href="//fonts.googleapis.com/css?family=Molengo:regular|IM+Fell+English:regular,italic|Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
-
+		
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		
-		<script type="text/javascript" src="/static/scripts/jquery.backstretch.js"></script>
-		
-		<script type="text/javascript" src="/static/scripts/jquery.fancybox.js"></script>
-		<script type="text/javascript" src="/static/scripts/jquery.fancybox-thumbs.js"></script>
-	
-		<script type="text/javascript" src="/static/scripts/gallery.js?2"></script>
+		<script type="text/javascript" src="/static/scripts/script.js"></script>		
 
 		{% endblock %}
 
@@ -47,7 +37,7 @@
 			<nav class="hidden-phone">
 				<ul>
 					{% for nav_item in nav %}
-					<li{{ nav_item.active ? ' class="active"' : '' }}><a href="{{ nav_item.url }}">{{ nav_item.title }}</a></li>
+					<li><a href="{{ nav_item.url }}"{{ nav_item.active ? ' class="active"' : '' }}>{{ nav_item.title }}</a></li>
 					{% endfor %}
 				</ul>
 			</nav>

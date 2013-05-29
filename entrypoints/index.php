@@ -3,8 +3,11 @@ require_once '../vendor/autoload.php';
 
 $routes = array(
 	'/gallery/([^/]+)/?' => 'gallery',
+	'/?' => 'home',
 );
 $nav = array(
+	
+	array( "url" => "/", "title" => "Home" ),
 	array( "url" => "/gallery/made-for-water", "title" => "Made for Water" ),
 	array( "url" => "/gallery/men-at-sea", "title" => "Men at Sea" ),
 	array( "url" => "/gallery/american-west", "title" => "American West" ),
@@ -13,6 +16,9 @@ $nav = array(
 foreach ( $nav as $i => $n ) {
 	$nav[$i]['active'] = ( $n['url'] == $_SERVER['REQUEST_URI'] );
 }
+
+$vars = array();
+$vars['nav'] = $nav;
 
 
 $loader = new Twig_Loader_Filesystem('../templates');
@@ -29,8 +35,14 @@ foreach ( $routes as $pattern => $action ) {
 	}
 }
 
+function home( ) {
+	global $twig, $vars;
+	echo $twig->render('home.html', $vars );
+
+}
+
 function gallery( $g ) {
-	global $twig, $nav;
+	global $twig, $vars;
 
 	$dir = "../www/images/gallery/" . $g . "/thumb/";
 	$images = array();
@@ -48,10 +60,7 @@ function gallery( $g ) {
 
 	sort( $images );
 
-
-	$vars = array();
 	$vars['images'] = $images;
-	$vars['nav'] = $nav;
 	//var_dump( $vars ); exit;
 
 	echo $twig->render('gallery/' . $g . '.html', $vars );
