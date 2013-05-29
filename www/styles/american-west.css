@@ -1,28 +1,6 @@
-bodyx {
-        background-color: black;
-	background-image: url(http://images.eurogamer.net/2013/fatchris/0058.jpg/EG11/modulate/100,25,100);
-	background-repeat: no-repeat;
-	background-position: center;	
-        background-size: cover;
-	background-attachment: fixed;
-
-
-}
-htmlx { 
-  background: url(http://images.eurogamer.net/2013/fatchris/0058.jpg/EG11/modulate/100,25,100) no-repeat center center fixed;
-  background-size: cover;
-  height: 100%;
-  overflow: hidden;
-  padding: 0px;
-  margin: 0px;
-}
-bodyx
-{
-  padding: 0px;
-  margin: 0px;
-  height:100%;
-  overflow: scroll;
-}
+.backstretch-overlay {
+	background-color: rgba(255,255,255,0.4);
+	}
 
 #footer {
 	color: black;

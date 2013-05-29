@@ -51,7 +51,7 @@ $(window).resize(function() {
 		//TODO: do this on a timer so as to not overload it when resizing
 		waitForFinalEvent(function(){
 			setCoverBackground();
-		}, 500, "resizing");
+		}, 1000, "resizing");
 
 	}
 
