@@ -1,0 +1,99 @@
+.carousel {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	height: 300px;
+	overflow: hidden;
+	}
+
+@media (max-width: 767px) {
+	.carousel {
+		height: 200px;
+	}
+}
+
+
+.carousel .carousel-overflow {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	}
+.carousel .slide-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	}
+
+.carousel .slide.slide-water {
+	background-image: url(/static/images/gallery/made-for-water/med/12-IMG_0536.jpg);
+	}
+.carousel .slide.slide-america {
+	background-image: url(/static/images/gallery/american-west/med/0058.jpg);
+	}
+
+
+.carousel .slide {
+		
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: block;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	}
+.carousel .text {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	padding: 0px 8px 0px 8px;
+	background-color: rgba(255,255,255,0.3);
+	margin: 10px;	
+        -moz-border-radius: 4px;
+        border-radius: 6px;
+	width: 300px;
+	max-width: 60%;
+	text-align: left;
+        text-shadow: -1px 1px 2px #444;
+        filter: dropshadow(color=#444, offx=-1, offy=1);
+        -webkit-box-shadow: 0px 0px 8px 0px #444;
+        box-shadow: 0px 0px 8px 0px #444;
+	}
+.carousel .text h2 {
+	margin-top: 4px;
+	}
+.carousel img {
+	width: 100%;
+	}
+.carousel .dots {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	}
+.carousel .dots .dot-container {
+	padding: 3px;
+	float: left;
+	cursor: pointer;
+	}
+.carousel .dots .dot-container .dot {
+	display: block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.5);
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+	}
+.carousel .dots .dot-container:hover .dot {
+	background-color: white;
+	}
+.carousel .dots .dot-container .dot.active {
+	background-color: white;
+	}
