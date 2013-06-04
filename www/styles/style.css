@@ -37,7 +37,7 @@ delete #header .back a {
 	color: #89AFBC;
 }
 #content {
-	padding-top: 30px;
+	padding-top: 18px;
 }
 
 
@@ -118,7 +118,7 @@ nav li a.active {
 	}
 
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 	nav {
 		float: right;
 		clear: both;
@@ -153,4 +153,17 @@ nav li a.active {
 		color: white;
 		}
 
+
+	div#content {
+		height: 100%;
+	}
+
+	#footer {
+		display: none;
+		position: fixed;
+		bottom: 0px;
+		text-align: right;
+		padding-bottom: 2px;
+		padding-right: 4px;
+	}
 }

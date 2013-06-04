@@ -44,7 +44,8 @@
 		var width = $(carousels[cid]).width();
 		$(carousels[cid]).find('.dot').removeClass('active');
 		$(carousels[cid]).find('.slide').each( function( item_id, item ) {
-			$(item).animate( { left: ( (item_id * width) - pos ) }, ms, function() { setCurrentDot(cid); } );
+			setCurrentDot(cid);
+			$(item).animate( { left: ( (item_id * width) - pos ) }, ms, function() { /*setCurrentDot(cid);*/ } );
 		});
 	}
 

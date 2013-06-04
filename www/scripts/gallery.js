@@ -24,7 +24,6 @@ $(document).ready(function() {
 var prevWidth = $(window).width();
 var prevHeight = $(window).height();
 $(window).resize(function() {
-	
 	if ( Math.abs( $(window).width() - prevWidth ) > 20 || Math.abs( $(window).height() - prevHeight ) > 20 ) {
 
 		//TODO: do this on a timer so as to not overload it when resizing
@@ -32,10 +31,10 @@ $(window).resize(function() {
 			setCoverBackground();
 		}, 1000, "resizing");
 
-	}
+		prevWidth = $(window).width();
+		prevHeight = $(window).height();
 
-	prevWidth = $(window).width();
-	prevHeight = $(window).height();
+	}
 });
 $(window).bind('orientationchange', function(event) {
 	adapt_to_orientation();

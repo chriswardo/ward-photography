@@ -3,7 +3,7 @@
 	<head>
 		<title>{{ title }} - by Chris Ward</title>
 		<meta name="description" content="{{ description }}" />
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 
 		{% block includes %}
 
@@ -33,8 +33,8 @@
 	<body cover="{{ cover }}">
                 <div id="header">
                         <h2><a href="/">Ward Photography</a></h2>
-			<div class="menu-btn visible-phone">&#9776;</div>
-			<nav class="hidden-phone">
+			<div class="menu-btn hidden-desktop">&#9776;</div>
+			<nav class="visible-desktop">
 				<ul>
 					{% for nav_item in nav %}
 					<li><a href="{{ nav_item.url }}"{{ nav_item.active ? ' class="active"' : '' }}>{{ nav_item.title }}</a></li>
