@@ -19,6 +19,9 @@
 	});
 	carousels[cid].append( dots );
 	
+	$(carousels[cid]).find('.slide[href]').click( function() {
+		window.location.href = $(this).attr('href');		
+	});	
 	
 	setCarouselPos(cid,0,0); //initial position
 

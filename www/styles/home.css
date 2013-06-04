@@ -4,9 +4,35 @@ body {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-
+#content {
+	padding-top: 0px;
+	height: 100%;
+}
+#footer {
+	position: fixed;
+	bottom: 0px;
+	color: #888;
+}
+@media (max-height: 630px) {
+	#footer {
+		display: none;
+	}
+}
 @media (max-width: 1024px) {
 	#content {
 		padding-top: 0px;
 	}
+	#footer {
+		display: none;
+	}
+
+        nav {
+		background-color: rgba(151,24,24,0.85);
+                }
+        nav li a {
+                color: #DDD;
+                }
+        nav li a:hover {
+                color: #EEE;
+                }
 }

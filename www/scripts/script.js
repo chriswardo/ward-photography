@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	$('.menu-btn').click( function() {
-		$('nav').toggleClass('hidden-phone');
+		$('nav').toggleClass('visible-desktop');
 	});
 
 });
