@@ -1,0 +1,24 @@
+{% set title = "Ko Lanta's Gasoline" %}
+{% set description = "Photos of gasoline stalls, gas stations &amp; gasoline signs from Ko Lanta (Koh Lanta) in Thailand" %}
+{% set keywords = "ko lanta,koh lanta,lanta,thailand,gasoline,gasoline stalls,gas,bottles,petrol,scooters,motorbikes,thailand gasoline,thai gasoline,gasoline signs,gas signs,thailand island" %}
+
+{% set cover = '/static/images/gallery/ko-lanta-gasoline/med/IMG_1297.jpg' %}
+{% extends 'gallery/gallery.html' %}
+
+{% block includes %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="/static/styles/ko-lanta-gasoline.css" media="screen" />
+{% endblock %}
+
+{% block content %}
+	<div id="description">
+		<h1>Ko Lanta's Gasoline</h1> 
+		On the small island of Ko Lanta in Thailand, there are gasoline stalls found by the roadside to cater for the many scooters. Each stall and sign is hand-made and unique. The gasoline is usually stored in old drinks bottles.
+	</div>
+	<div id="gallery">
+
+		{% for img in images %}
+		<a href="/static/images/gallery/ko-lanta-gasoline/med/{{ img }}" class="fancybox-thumb" rel="fancybox-thumb"><img src="/static/images/gallery/ko-lanta-gasoline/thumb/{{ img }}" width="120" height="120" /></a>
+		{% endfor %}
+	</div>
+{% endblock %}

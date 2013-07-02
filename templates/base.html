@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
 	<head>
-		<title>{{ title }} - by Chris Ward</title>
-		<meta name="description" content="{{ description }}" />
+		<title>{{ title | default('Ward Photography') }} - by Chris Ward</title>
+		<meta name="description" content="{{ description | default("Photos and projects by Chris Ward, a freelance photography from Brighton") }}" />
+		<meta name="keywords" content="{{ keywords | default("photography,brighton,brighton photography,photos of brighton,brighton photographers,travel photography,water,made for water,men at sea,water photographs,ko lanta,koh lanta,gasoline") }}" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 
 		{% block includes %}

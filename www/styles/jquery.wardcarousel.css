@@ -28,6 +28,14 @@
 .carousel .slide.slide-america {
 	background-image: url(/static/images/gallery/american-west/med/0058.jpg);
 	}
+.carousel .slide.slide-men {
+	background-image: url(/static/images/gallery/men-at-sea/med/IMG_3993_v2.jpg);
+	}
+.carousel .slide.slide-gasoline {
+	background-image: url(/static/images/gallery/ko-lanta-gasoline/med/IMG_1297.jpg);
+	}
+
+
 
 
 .carousel .slide {
@@ -53,14 +61,14 @@
 	bottom: 25px;
 	padding: 0px;
 	margin: 0px;	
-	width: 350px;
+	width: 400px;
 	max-width: 100%;
 	text-align: left;
 	}
 .carousel .text p {
         text-shadow: -1px 1px 2px #000;
 	font-size: 16px;
-	margin: 20px;
+	margin: 20px 20px 30px 20px;
 	}
 .carousel .text h2 {
 	font-weight: normal;
